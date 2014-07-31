@@ -8,3 +8,5 @@
   * [航模电机及驱动](quadcopter/motor.md)
   * [CrazePony硬件原理](quadcopter/hardware-base.md)
   * [如何DIY属于自己的四轴飞行器](quadcopter/diy-quadcopter.md)
+* [可重复使用的无线点火器](可重复使用的无线点火器.md)
+* [用树莓派搭建便携无线电广播站](用树莓派搭建便携无线电广播站.md)
