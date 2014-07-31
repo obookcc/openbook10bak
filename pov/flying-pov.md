@@ -4,70 +4,70 @@
 
 外形灵感（出自《机动战士高达UC-EP7》1：15：18）
 
-![](/assets/img/flyingpov-0.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-0.jpg)
 
 PCB板刚到 & PCB板展示
 
-![](/assets/img/flyingpov-1.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-1.jpg)
 
-![](/assets/img/flyingpov-2.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-2.jpg)
 
 组装展示
 
-![](/assets/img/flyingpov-3.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-3.jpg)
 
-![](/assets/img/flyingpov-4.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-4.jpg)
 
 空板旋转展示
 
-![](/assets/img/flyingpov-5.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-5.jpg)
 
 坑爹的芯片（未校正 & 校正前后对比）
 
-![](/assets/img/flyingpov-6.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-6.jpg)
 
-![](/assets/img/flyingpov-7.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-7.jpg)
 
 最小系统下载测试
 
-![](/assets/img/flyingpov-8.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-8.jpg)
 
 主控板焊接完成
 
-![](/assets/img/flyingpov-9.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-9.jpg)
 
-![](/assets/img/flyingpov-10.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-10.jpg)
 
 供电板&电源通信板
 
-![](/assets/img/flyingpov-11.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-11.jpg)
 
-![](/assets/img/flyingpov-12.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-12.jpg)
 
 基板全套配件（含电机）
 
-![](/assets/img/flyingpov-13.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-13.jpg)
 
 组装完成展示
 
-![](/assets/img/flyingpov-14.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-14.jpg)
 
-![](/assets/img/flyingpov-18.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-18.jpg)
 
 IO口测试
 
-![](/assets/img/flyingpov-15.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-15.jpg)
 
 配重测试
 
-![](/assets/img/flyingpov-16.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-16.jpg)
 
-![](/assets/img/flyingpov-17.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-17.jpg)
 
 不知不觉已经是凌晨，最后上两张效果图
 
-![](/assets/img/flyingpov-19.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-19.jpg)
 
-![](/assets/img/flyingpov-20.jpg)
+![](http://doask.qiniudn.com/openbook10flyingpov-20.jpg)
 
 

@@ -2,7 +2,7 @@
 
 笔者最初就是在一个宣讲会上看到一位学长做的旋转时钟，从此便热爱上了电子设计，并计划着自己实现一个旋转时钟。通过学习和努力，最终完成了这一制作，在传统的旋转时钟的基础之上，也进行了一些改进，接下来便会同大家分享这一制作。笔者还有很多很有趣的点子，也会持续更新这个项目并实现这些点子。欢迎大家持续关注这个项目，有任何建议也欢迎告知笔者，让我们一起完善这个有趣的东西！
 
-![](/assets/img/pov.jpg)
+![](http://doask.qiniudn.com/openbook10pov.jpg)
 
 <embed src="http://player.youku.com/player.php/sid/XNzM3MjE2Mjcy/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 
@@ -12,21 +12,21 @@
 
 根据旋转时钟的显示原理：
 
-![](/assets/img/pov-theory.png)
+![](http://doask.qiniudn.com/openbook10pov-theory.png)
 
 可以看到，要想解决图像的畸变问题，只需要将需要显示的图片与显示的点进行一一对应，如下图所示：
 
-![](/assets/img/pov-theory-2.jpg)
+![](http://doask.qiniudn.com/openbook10pov-theory-2.jpg)
 
 如果我们想要在旋转时钟上面显示这只兔斯基，那么只需要兔斯基的轮廓覆盖住的相应的点点亮就可以实现理想的显示效果了。
 
 旋转时钟的显示原理不能改变，那么可以做文章的就只有显示的数据了。在进行点阵数据提取的时候，一般传统的都是按照列或者行来提取数据，如下图所示，其中图片中的紫线代表正在扫描的位置，而箭头代表扫描的方向：
 
-![](/assets/img/pov-theory-3.jpg)
+![](http://doask.qiniudn.com/openbook10pov-theory-3.jpg)
 
 用这种方法扫描得到的点阵数据再通过旋转时钟进行显示以后自然会出现类似扇形的畸变。那么，我们反其道而行之，在扫描的时候根据旋转时钟显示的扫描方向，亦即以图片中心为原点，扫描线绕该原点旋转360°进行点阵数据的提取，那么最后通过旋转时钟显示得到的图片自然就是正常没有畸变的图片了。如下图所示，其中图片中的紫线代表正在扫描的位置，而箭头代表扫描的方向：
 
-![](/assets/img/pov-theory-4.jpg)
+![](http://doask.qiniudn.com/openbook10pov-theory-4.jpg)
 
 那么，在弄明白原理和问题的解决办法以后，就可以开始实践了！利用MATLAB写出相关代码，就可以实现图片的点阵数据的提取了。相关MATLAB代码如下：
 
@@ -79,7 +79,7 @@ fclose(fid);
 ```
 利用上段提取字模和图片点阵数据的Matlab程序，对需要提取的图片或者文字信息进行处理以后，就可以得到需要的数据了。下面是利用上诉程序得到的兔斯基这张图片的数据
 
-![](/assets/img/pov-data-matrix.jpg)
+![](http://doask.qiniudn.com/openbook10pov-data-matrix.jpg)
 
 可以看到，每一组数据是由一个8位的十六进制数据构成，刚好是32位二进制数据，二进制“1”就代表是led要亮，“0”则代表灭。
 
@@ -87,7 +87,7 @@ fclose(fid);
 
 在单片机控制程序方面需要的设计思路是利用光电传感器或者霍尔传感器（也可以使用诸如二维陀螺仪等传感器，但是这种一般在设计自行车轮毂的POV等不方便设置参考点的时候才需要用到，笔者在这里描述的POV主要是一个自制的单独模块，所以一般的光电传感器或者或偶尔传感器就可以满足设计要求了）在基板旋转到每一圈中的固定位置时，产生一个定位信号，并以此为基准开始每一度的扫描显示。
 
-![](/assets/img/pov-demo.jpg)
+![](http://doask.qiniudn.com/openbook10pov-demo.jpg)
 
 如上图所示，在每转一圈的同时进行计时，旋转一圈得到的时间数据除以显示精度（例如精度为1°时，就除以360）就可以得到扫描显示间隔的时间，然后根据旋转该圈起始时间和当前时刻就可以得到基板当前的实际位置，然后根据数据对应显示该位置应显示的内容即可。
 
@@ -95,12 +95,12 @@ fclose(fid);
 
 显示控制的程序流程图：
 
-![](/assets/img/pov-flow-graph.jpg)
+![](http://doask.qiniudn.com/openbook10pov-flow-graph.jpg)
 
 ## 硬件环境的搭建
 要实际做出一个旋转时钟，少了实物制作当然是不行的，旋转时钟的系统框图如下所示：
 
-![](/assets/img/pov-hardware-graph.jpg)
+![](http://doask.qiniudn.com/openbook10pov-hardware-graph.jpg)
 
 其中，具体需要注意的有以下几点：
 
@@ -116,7 +116,7 @@ fclose(fid);
 
 具体来讲主要有电池供电、电刷供电、无线传能这三种方法。无线传能的实现难度比较大，而且效率较低，所以不予考虑；电池供电虽然简便，但是在旋转基板上面安装电池以后配重问题比较难解决，而且高速旋转可能导致电池飞出，所以也不予考虑；电刷供电虽然是机械式的供电方式，有机械损耗等问题，但是综合起来时比较靠谱的方案，所以笔者最终选用了电刷供电的供电方式。
 
-![](/assets/img/pov-brush-power.jpg)
+![](http://doask.qiniudn.com/openbook10pov-brush-power.jpg)
 
 如上图所示电机轴芯是与电机的供电电路绝缘的，所以可以用作旋转基板的供电（GND），在轴芯外面裹上一层热缩管用以绝缘，在套上一个铜套就可以用作基板的电源（VCC）供电。电刷只需要分别与铜套和转轴接触就可以实现旋转基板的供电。
 
@@ -131,34 +131,34 @@ fclose(fid);
 
 下面就是笔者制作的旋转时钟的实物图：
 
-![](/assets/img/pov-demo-1.jpg)
+![](http://doask.qiniudn.com/openbook10pov-demo-1.jpg)
 
-![](/assets/img/pov-demo-2.jpg)
+![](http://doask.qiniudn.com/openbook10pov-demo-2.jpg)
 
 利用前面提到的提取字模和图片点阵数据的原理，通过Matlab编写相关程序，对需要提取的图片或者文字信息进行处理以后，把数据烧写到单片机中，便可以得到理想的效果。
 
 下面是一些最终效果的展示：
 
-![](/assets/img/pov-demo-3.jpg)
+![](http://doask.qiniudn.com/openbook10pov-demo-3.jpg)
 
-![](/assets/img/pov-demo-4.jpg)
+![](http://doask.qiniudn.com/openbook10pov-demo-4.jpg)
 
-![](/assets/img/pov-demo-5.jpg)
+![](http://doask.qiniudn.com/openbook10pov-demo-5.jpg)
 
-![](/assets/img/pov-demo-6.jpg)
+![](http://doask.qiniudn.com/openbook10pov-demo-6.jpg)
 
 ## 写在最后
 这个旋转时钟是笔者在前年，也就是2012年10月的时候帮做硬件的队友做出来当做生日礼物送给他姐姐的。由于那个时候专业知识还不够完善，没有学习PCB设计，所以无奈只能选择手焊的方式（真的是太痛苦了。。。），所以制作也不算精良。
 
 笔者在写这篇文章的时候由于一些契机，将这个趣味制作翻了出来分享给大家，再加上笔者之前的一些奇思妙想，有了制作RGB彩色旋转显示系统的想法，而且经过这期间的学习，笔者已经会绘制PCB板了。所以，我也在继续完善这个项目，预计2014年暑期就可以完成RGB彩色旋转显示系统，下面是我已经完成设计的PCB板（正在工厂经行加工，很快就可以拿到实物了）的展示：
 
-![](/assets/img/pov-pcb-1.png)
+![](http://doask.qiniudn.com/openbook10pov-pcb-1.png)
 
-![](/assets/img/pov-pcb-2.png)
+![](http://doask.qiniudn.com/openbook10pov-pcb-2.png)
 
-![](/assets/img/pov-pcb-3.png)
+![](http://doask.qiniudn.com/openbook10pov-pcb-3.png)
 
-![](/assets/img/pov-pcb-4.png)
+![](http://doask.qiniudn.com/openbook10pov-pcb-4.png)
 
 考虑到光心的准确重合，采用了RGB三个叶片状的设计，同时也突破了旋转时钟一贯的长条形外形风格。而且将供电模块，无线模块还有时钟模块全部和在一起画在另一层板子上面，同控制显示模块（即最大的那块板子）分立开来，不仅简化了布局布线，方便修改板子，也在一定程度上解决了配重的问题。由于主要的显示控制板采用三叶设计，比较像一个三叶螺旋桨，这也是这个项目名字FlyingPOV的由来。当然，它肯定不能飞啦~（笑）
 
