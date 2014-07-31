@@ -1,0 +1,645 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>可重复使用的无线点火器 | 开源杂志-第十期</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.6.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <meta name="author" content="obookcc">
+    
+    
+    <link rel="next" href="./用树莓派搭建便携无线电广播站.html" />
+    
+    
+    <link rel="prev" href="./quadcopter/diy-quadcopter.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book" data-github="obookcc/openbook10bak" data-level="3" data-basepath="." data-revision="1406769536442">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/obookcc/openbook10bak" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/obookcc/openbook10bak/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/obookcc/openbook10bak/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >开源杂志-第十期</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        <li>
+            <a href="https://github.com/obookcc" target="blank" class="author-link">About the author</a>
+        </li>
+        
+
+        
+        
+        <li>
+            <a href="https://github.com/obookcc/openbook10bak/issues" target="blank" class="issues-link">Questions and Issues</a>
+        </li>
+        
+
+        
+        
+        <li>
+            <a href="https://github.com/obookcc/openbook10bak/edit/master/可重复使用的无线点火器.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+	
+
+        
+        <li class="divider"></li>
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="crazepov.html">
+            
+                
+                    <a href="./crazepov.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         CrazePOV旋转时钟
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="pov/pov.html">
+            
+                
+                    <a href="./pov/pov.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         制作专属自己的POV旋转时钟
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="pov/flying-pov.html">
+            
+                
+                    <a href="./pov/flying-pov.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         CrazePOV第二版
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="pov/pov-story.html">
+            
+                
+                    <a href="./pov/pov-story.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         电子设计中POV的故事
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="quadcopter.html">
+            
+                
+                    <a href="./quadcopter.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         四轴飞行器连载（第一期）
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="quadcopter/motor.html">
+            
+                
+                    <a href="./quadcopter/motor.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         航模电机及驱动
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2" data-path="quadcopter/hardware-base.html">
+            
+                
+                    <a href="./quadcopter/hardware-base.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                         CrazePony硬件原理
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3" data-path="quadcopter/diy-quadcopter.html">
+            
+                
+                    <a href="./quadcopter/diy-quadcopter.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                         如何DIY属于自己的四轴飞行器
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="3" data-path="可重复使用的无线点火器.html">
+            
+                
+                    <a href="./可重复使用的无线点火器.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         可重复使用的无线点火器
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="用树莓派搭建便携无线电广播站.html">
+            
+                
+                    <a href="./用树莓派搭建便携无线电广播站.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         用树莓派搭建便携无线电广播站
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 90%;min-width: 80%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./crazepov.html" title="CrazePOV旋转时钟" class="chapter done new-chapter" data-progress="1" style="left: 10%;"></a>
+    
+        <a href="./pov/pov.html" title="制作专属自己的POV旋转时钟" class="chapter done " data-progress="1.1" style="left: 20%;"></a>
+    
+        <a href="./pov/flying-pov.html" title="CrazePOV第二版" class="chapter done " data-progress="1.2" style="left: 30%;"></a>
+    
+        <a href="./pov/pov-story.html" title="电子设计中POV的故事" class="chapter done " data-progress="1.3" style="left: 40%;"></a>
+    
+        <a href="./quadcopter.html" title="四轴飞行器连载（第一期）" class="chapter done new-chapter" data-progress="2" style="left: 50%;"></a>
+    
+        <a href="./quadcopter/motor.html" title="航模电机及驱动" class="chapter done " data-progress="2.1" style="left: 60%;"></a>
+    
+        <a href="./quadcopter/hardware-base.html" title="CrazePony硬件原理" class="chapter done " data-progress="2.2" style="left: 70%;"></a>
+    
+        <a href="./quadcopter/diy-quadcopter.html" title="如何DIY属于自己的四轴飞行器" class="chapter done " data-progress="2.3" style="left: 80%;"></a>
+    
+        <a href="./可重复使用的无线点火器.html" title="可重复使用的无线点火器" class="chapter done new-chapter" data-progress="3" style="left: 90%;"></a>
+    
+        <a href="./用树莓派搭建便携无线电广播站.html" title="用树莓派搭建便携无线电广播站" class="chapter  new-chapter" data-progress="4" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_10">
+                    
+                        <h1 id="">可重复使用的无线点火器</h1>
+<blockquote>
+<p><a href="http://www.instructables.com/id/The-Reusable-and-Wireless-Igniter/?ALLSTEPS" target="_blank">原文链接</a> 作者:nodcah 翻译:plantpark</p>
+</blockquote>
+<p>标签（空格分隔）: arduino 无线 </p>
+<hr>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter1.jpg" alt=""></p>
+<h2 id="1">1.简介</h2>
+<p>这个项目使用一个<a href="http://www.seeedstudio.com/depot/Grove-433MHz-Simple-RF-link-kit-p-1062.html" target="_blank">simple RF link</a>无线通讯套件和两个Arduino做成的可以从90英寸远的地方进行点火。已经厌倦了绕来绕去电线的我，希望能有些突破。so 无线点火器诞生了，不仅更加安全，而且看着非常酷呢。它不仅可以用来点爆竹，模型火箭，还有更大的想象空间。</p>
+<p><strong>申明</strong>：制作和使用点火器时一定要注意安全，对因此造成的安全事故，本人不承担任何责任。</p>
+<h2 id="2">2.清单</h2>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter2.jpg" alt=""></p>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter3.jpg" alt=""></p>
+<h3 id="21">2.1材料</h3>
+<table>
+<thead>
+<tr>
+<th>元件</th>
+<th>供应商</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arduino Uno REV 3 x2</td>
+<td>Sparkfun buying guide, Radioshack</td>
+<td>$50-60</td>
+</tr>
+<tr>
+<td>RF Link Transmitter - 434MHz</td>
+<td>Sparkfun/Sparkfun</td>
+<td>$9</td>
+</tr>
+<tr>
+<td>外壳 x2</td>
+<td><a href="https://www.sparkfun.com/products/10088" target="_blank">Sparkfun</a></td>
+<td>$7-12</td>
+</tr>
+<tr>
+<td>拨动开关</td>
+<td><a href="https://www.sparkfun.com/products/11313" target="_blank">Sparkfun</a></td>
+<td>$3-5.50</td>
+</tr>
+<tr>
+<td>单刀双掷滑动开关 x2</td>
+<td><a href="https://www.sparkfun.com/products/9609" target="_blank">Sparkfun</a></td>
+<td>$.75-4</td>
+</tr>
+<tr>
+<td>喇叭（可选）</td>
+<td><a href="https://www.sparkfun.com/products/9151" target="_blank">Sparkfun</a></td>
+<td>$2-4</td>
+</tr>
+<tr>
+<td>点火器</td>
+<td><a href="http://www.amazon.com/Traxxas-3232X-Super-Duty-Long/dp/B000LU0TKK/" target="_blank">Amazon</a></td>
+<td>$6</td>
+</tr>
+<tr>
+<td>LEDs</td>
+<td><a href="https://www.sparkfun.com/search/results?term=led&amp;what=products" target="_blank">Sparkfun</a></td>
+<td>$1-5.50</td>
+</tr>
+<tr>
+<td>5V 继电器</td>
+<td><a href="https://www.sparkfun.com/products/100" target="_blank">Sparkfun</a></td>
+<td>$2-5</td>
+</tr>
+<tr>
+<td>电阻包</td>
+<td><a href="https://www.sparkfun.com/products/10969" target="_blank">Sparkfun</a></td>
+<td>$8-$15</td>
+</tr>
+<tr>
+<td>8针插座</td>
+<td><a href="https://www.sparkfun.com/products/7937" target="_blank">Sparkfun</a></td>
+<td>$1-2</td>
+</tr>
+<tr>
+<td>总计</td>
+<td></td>
+<td>~$85-130</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22">2.2工具:</h3>
+<ul>
+<li>电线 (做天线用)</li>
+<li>洞洞板</li>
+<li>几个公头</li>
+<li>一些可以保护arduino板的柔性材料</li>
+<li>钻头</li>
+<li>纸张或砂纸</li>
+<li>电烙铁/焊锡</li>
+<li>剥线钳</li>
+<li>螺钉螺母等</li>
+<li>大鳄鱼夹</li>
+<li>电池盒或2AA电池</li>
+<li>带接头的9V电池</li>
+<li>1.5V AA 电池  x2</li>
+</ul>
+<h2 id="3">3.组装</h2>
+<h3 id="31-">3.1 电路原理图</h3>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter6.jpg" alt=""></p>
+<p>根据下面照片中的电路原理图搭建电路。</p>
+<p>电路设计成，当发射端发射信号后，触发器点火前会五秒倒计时</p>
+<p>注意：我发现，让点火器正常工作的电线尺寸要比跳线甚至面包板线粗一些。所以，用鳄鱼夹直接将点火器的接头连接好是非常有必要的。</p>
+<h3 id="32-">3.2 制作点火器</h3>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter7.jpg" alt=""></p>
+<p>我使用的点火器是为遥控汽车点燃油气混合物而设计的。在1.5V下即可正常工作，炙热的内芯开始燃烧。提供一种类似硝化棉的引火材料（可以在低温下点燃，并能燃烧产生高温）或者在点火器内芯处放一个很小的保险丝是非常必要的。</p>
+<p>一个AA电池不足以让点火器正常运行，所以，我制作了一个电池盒可以让两个电池并联。然后将用鳄鱼夹链接点火器。</p>
+<p>电池盒：</p>
+<p>1.)将街头一侧的弹簧取下
+2.)将弹簧焊接在对面，这样两个弹簧就在电池盒的同一侧了。
+3.)确保电池盒两侧是接通的，然后分别从两侧焊接一根线出来
+4.)作品最终的形态最有有显示</p>
+<p>鳄鱼夹：</p>
+<p>1.)将一个大鳄鱼夹的两侧砸平
+2.)用电钻在鳄鱼夹的一侧打直径15/64&quot;的孔
+3.)将点火器拧到这个孔里并用电烙铁在高温（我用的时400℃）下焊接(或者用尺寸正好1/4 x 28的螺丝)
+4.)将两根线分别缠到鳄鱼夹的手柄上
+5.)将一根线焊接到点火器一头，另一根接到中间的位置
+6.)最终效果如上图所示</p>
+<h3 id="33-">3.3 放在盒子内</h3>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter8.jpg" alt=""></p>
+<p>首先，钻几个小孔，然后将元件与边缘大小相匹配。如果使用扬声器，请多钻几个孔布成矩阵。</p>
+<p>为将盒子紧固，我制作了一个适应arduino的小外壳。我同样希望重复使用接收器和发射器，所以我把它们放在如图所示的IC插座。
+I used some foam I cut to hold the arduino in place, but standoffs and screws would work too.</p>
+<p>我用了些海绵将arduino固定到位，同样支撑和螺丝也能起作用。</p>
+<h2 id="4-">4 软件</h2>
+<h3 id="41--virtualwire">4.1 安装 VirtualWire库</h3>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter4.jpg" alt=""></p>
+<p>这个项目中所有涉及的代码均是围绕一个叫VirtualWire的arduino库实现的。这个库将廉价无线模块的功能发挥到了极限。</p>
+<p>1）可以在<a href="http://www.airspayce.com/mikem/arduino/VirtualWire/VirtualWire-1.16.zip" target="_blank">这里</a>直接下载代码，或者访问<a href="http://www.airspayce.com/mikem/arduino/" target="_blank">网站</a>下载</p>
+<p>2）根据Arduino IDE的配置，找到sketchbook文件夹的位置</p>
+<p>3)看是否有“libraries”的文件夹，若没有则新建一个，然后将VirtualWire放在文件夹内。</p>
+<p>4)打开Arduino软件，这样VirtualWire库安装完成。</p>
+<h3 id="42-virtual-wire">4.2 写Virtual Wire代码</h3>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter5.jpg" alt=""></p>
+<p>接收端代码</p>
+<pre><code class="lang-C++">
+//  Receiver by Noah DC
+//  This code is built around the VirualWire library which 
+//  can be found here: http://www.airspayce.com/mikem/arduino/
+//  Visit my instructable for the wiring, explaination, etc.
+//  http://www.instructables.com/id/The-Reusable-and-Wireless-Igniter/
+
+const int recieverPin = 2; //to reciever module
+const int ignitionPin = 3; //to igniter
+const int activeIndicatorPin = 5; //to green LED 
+const int inactiveIndicatorPin = 6; //to red LED 
+const int buzzerPin = 4; //to the buzzer
+#include &lt;VirtualWire.h&gt;
+boolean liftOff= false;
+
+void setup(){
+Serial.begin(9600); //for debugging 
+pinMode(activeIndicatorPin, OUTPUT);
+pinMode(inactiveIndicatorPin, OUTPUT);
+pinMode(ignitionPin, OUTPUT);
+vw_set_ptt_inverted(true); //normal setup stuff
+vw_setup(2000);
+vw_set_rx_pin(recieverPin);
+vw_rx_start();
+}
+
+void loop(){
+while(liftOff == false){
+digitalWrite(activeIndicatorPin, HIGH); //shows that igniter hasn&#39;t been used yet
+uint8_t buf[VW_MAX_MESSAGE_LEN];
+uint8_t buflen = VW_MAX_MESSAGE_LEN;
+if (vw_get_message(buf, &amp;buflen)) {
+Serial.print(&quot;Got: &quot;);
+Serial.print(buf[0], DEC); //only one byte in the array (it should be 97)
+Serial.println(&quot; &quot;);
+}
+if (buf[0] == 97){ //checks if the letter &quot;a&quot; is recieved (ASCII number is 97)
+liftOff = ignition();
+}
+}
+}
+int ignition(){
+tone(buzzerPin, 500, 300); //5 second countdown
+delay(1000); //it&#39;s not necessary, and can be removed
+tone(buzzerPin, 500, 300); //4 (I relize it&#39;s not exactly a second)
+delay(1000);
+tone(buzzerPin, 500, 300); //3
+delay(1000);
+tone(buzzerPin, 500, 300); //2
+delay(1000);
+tone(buzzerPin, 500, 300); //1
+delay(500);
+//ignition!!
+digitalWrite(ignitionPin, HIGH);
+delay(2000); 
+digitalWrite(ignitionPin, LOW);
+digitalWrite(activeIndicatorPin,LOW);
+digitalWrite(inactiveIndicatorPin,HIGH); //shows that igniter has been used
+return true; //prevents other ignitions for safety purposes
+}
+</code></pre>
+<p>发射端代码</p>
+<pre><code>//  Transmitter by Noah DC
+//  This code is built around the VirualWire library which 
+//  can be found here: http://www.airspayce.com/mikem/arduino/
+//  Visit my instructable for the wiring, explaination, etc.
+//  http://www.instructables.com/id/The-Reusable-and-Wireless-Igniter/
+const int transmitPin = 2; //pin to the transitter module
+const int buttonPin = 3; //pin to ignition button
+const int armedPin = 4; //pin for indicator LED
+#include &lt;VirtualWire.h&gt;
+void setup() {
+pinMode(armedPin, OUTPUT);
+digitalWrite(armedPin, HIGH); //shows that igniter is armed
+vw_set_ptt_inverted(true); //setup stuff
+vw_setup(2000);
+vw_set_tx_pin(transmitPin);
+}
+void loop() {
+char *msg = &quot;a&quot;; //going to send the char &quot;a&quot;
+if (digitalRead(buttonPin) == 1) {
+digitalWrite(13, HIGH); //blink LED to show it&#39;s working
+vw_send((uint8_t*)msg, 1); //sends the char
+vw_wait_tx(); //wait until the char is sent
+digitalWrite(13, LOW);
+delay(500);
+}
+}
+</code></pre><h2 id="5-">5 成果</h2>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter9.jpg" alt=""></p>
+<p><img src="http://huohua.qiniudn.com/wireless-Igniter10.jpg" alt=""></p>
+<iframe height=498 width=510 src="http://player.youku.com/embed/XNzQ2MDE3NDY4" frameborder=0 allowfullscreen></iframe>
+
+<p>终于，一个无线点火器诞生了，除了点爆竹外，还有更多有意思的应用值得你去发现哦~~</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./quadcopter/diy-quadcopter.html" class="navigation navigation-prev " aria-label="Previous page: 如何DIY属于自己的四轴飞行器"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./用树莓派搭建便携无线电广播站.html" class="navigation navigation-next " aria-label="Next page: 用树莓派搭建便携无线电广播站"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
