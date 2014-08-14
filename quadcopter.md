@@ -24,4 +24,4 @@
 >CrazePony软件开发经验；
 >大四轴 VS 小四轴
 
-Craze团队介绍：
+Craze团队介绍：一个开源电子爱好社区组织。开放，合作，分享是其理念。现在已经在做的是CrazePony四轴飞行器项目和CrazePOV旋转时钟项目。大家可以到[官方网站](http://www.crazepony.com/)了解更多关于他们的作品和故事。
