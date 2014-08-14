@@ -1,3 +1,5 @@
+>作者：nieyong，craze团队成员
+
 POV是英文Persistence of Vision的缩写，即人眼视觉暂留现象。利用这个原理，快速移动led灯带可以产生文字或者图像。这个实验是很多喜欢电子设计的伙伴们在入门时都会接触到的，难度不大，又能够有看得见的效果。从点亮一个led灯到点亮一排，然后到形成一个图像，这种循序渐进总能一点点满足我们极强的好奇心。
 
 ![](http://doask.qiniudn.com/openbook10crazepov-3.jpg)
