@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en-US" >
+<html lang="en-US" manifest="../manifest.appcache">
     
     <head>
         
@@ -7,7 +7,7 @@
         <title>航模电机及驱动 | 开源杂志-第十期</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 0.6.3">
+        <meta name="generator" content="GitBook 0.5.5">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="obookcc/openbook10bak" data-level="2.1" data-basepath=".." data-revision="1406769536442">
+    <div class="book" data-github="obookcc/openbook10bak" data-level="2.1" data-basepath=".." data-revision="1408415515379">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -111,7 +111,7 @@
         
         
         <li>
-            <a href="https://github.com/obookcc/openbook10bak/issues" target="blank" class="issues-link">Questions and Issues</a>
+            <a href="https://github.com/obookcc/openbook10bak/issues" target="blank"class="issues-link">Questions and Issues</a>
         </li>
         
 
@@ -121,8 +121,6 @@
             <a href="https://github.com/obookcc/openbook10bak/edit/master/quadcopter/motor.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
-
-	
 
         
         <li class="divider"></li>
@@ -232,7 +230,7 @@
                 
     
         
-        <li class="chapter active" data-level="2.1" data-path="quadcopter/motor.html">
+        <li class="chapter " data-level="2.1" data-path="quadcopter/motor.html">
             
                 
                     <a href="../quadcopter/motor.html">
@@ -272,7 +270,7 @@
                         
                             <b>2.3.</b>
                         
-                         如何DIY属于自己的四轴飞行器
+                         DIY四轴飞行器如何入门
                     </a>
                 
             
@@ -352,7 +350,7 @@
     
         <a href="../quadcopter/hardware-base.html" title="CrazePony硬件原理" class="chapter  " data-progress="2.2" style="left: 70%;"></a>
     
-        <a href="../quadcopter/diy-quadcopter.html" title="如何DIY属于自己的四轴飞行器" class="chapter  " data-progress="2.3" style="left: 80%;"></a>
+        <a href="../quadcopter/diy-quadcopter.html" title="DIY四轴飞行器如何入门" class="chapter  " data-progress="2.3" style="left: 80%;"></a>
     
         <a href="../可重复使用的无线点火器.html" title="可重复使用的无线点火器" class="chapter  new-chapter" data-progress="3" style="left: 90%;"></a>
     
@@ -365,33 +363,61 @@
                 
                     <section class="normal" id="section-gitbook_8">
                     
-                        <p>电机驱动控制就是控制电机的转动或者停止，以及转动的速度。电机驱动控制部分也叫做<strong>电子调速器</strong>，简称电调，英文electronic speed controller（ESC）。电调对应使用的电机不同，分无刷电调和有刷电调。</p>
+                        <h1 id="-">航模电机及驱动</h1>
+<blockquote>
+<p>作者：nieyong，CamelGo</p>
+</blockquote>
+<p>电动机有有刷和无刷之分。结构上，无刷电机和有刷电机有相似之处，也有转子和定子，只不过和有刷电机的结构相反；有刷电机的转子是线圈绕组，和动力输出轴相连，定子是永磁磁钢；无刷电机的转子是永磁磁钢，连同外壳一起和输出轴相连，定子是绕组线圈，去掉了有刷电机用来交替变换电磁场的换向电刷，故称之为无刷电机（Brushless motor）。</p>
+<h2 id="-">有刷电机</h2>
+<p>有刷电动机是内部含有换相电刷的电动机。什么是电刷呢，直接上图。电刷通过绝缘座固定在电动机后盖上，将电源的正负极引入到转子的换相器上，而换相器连通了转子上的线圈，线圈极性不断的交替变换与外壳上固定的磁铁形成作用力而转动起来。下图是将现在Crazepony使用的电机拆解之后看到的电刷和换相器。</p>
+<p><img src="http://doask.qiniudn.com/openbook10motor-dianshua.jpg" alt=""></p>
+<p>有刷电机由于电刷和换相器之间的物理接触，所以有摩擦大，发热大，效率低等缺点。但是有刷电机同样具有制造简单，成本低廉的优点，所以现在市面上有刷电机仍然占有很大份额。</p>
+<h2 id="-">无刷电机</h2>
+<p>有刷电机通过电刷和换相器这种结构设计获得固定方向的磁场作用力而转动起来。无刷电机没有电刷和换相器，它是如何获得固定方向的磁场作用力的呢？简单而言，依靠改变输入到无刷电机定子线圈上的电流波交变频率和波形，在绕组线圈周围形成一个绕电机几何轴心旋转的磁场，这个磁场驱动转子上的永磁磁钢转动，电机就转起来了。</p>
+<p>电机的性能和磁钢数量、磁钢磁通强度、电机输入电压大小等因素有关，更与无刷电机的控制性能有很大关系，因为输入的是直流电，电流需要电子调速器将其变成3相交流电，这就是无刷电机配合的电调需要解决的问题。</p>
+<p>无刷电机拥有动力足，寿命长，效率高等优势。所以<strong>大四轴都是用无刷电机</strong>的，模型无刷电机的外观如下，区别于有刷电机，最明显的就是<strong>无刷电机有三根线，并且配合电调使用</strong>。</p>
+<p><img src="http://doask.qiniudn.com/openbook10motor-wushua.jpg" alt=""></p>
+<h2 id="-">电机之空心杯</h2>
+<p>空心杯电机（coreless motor）属于直流、永磁、伺服微特电机。空心杯电机在结构上突破了传统电机的转子结构形式，采用的是无铁芯转子。空心杯电机具有十分突出的节能、控制和拖动特性。</p>
+<p>空心杯电机分为有刷和无刷两种，有刷空心杯电机转子无铁芯，无刷空心杯电机定子无铁芯。</p>
+<p><strong>Crazepony使用的是有刷空心杯高速电机（30000转/分），7mm*16mm，电机轴直接为1mm。</strong>当然，随着现在生产工艺的进步，现在市面上已经有体积非常小的航模无刷电机，Crazepony也会尝试使用无刷电机进行改进。</p>
+<p>Crazepony空心杯高速电机拆解图，可以明显看到线圈中间没有铁芯的。</p>
+<p><img src="http://doask.qiniudn.com/openbook10coreless-motor.png" alt=""></p>
+<h2 id="-">扩展阅读</h2>
+<p>关于无刷直流电机原理的讲解。</p>
+<embed src="http://player.youku.com/player.php/sid/XMzI4MzkxMTg4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+
+
+<p>电机驱动控制就是控制电机的转动或者停止，以及转动的速度。电机驱动控制部分也叫做<strong>电子调速器</strong>，简称电调，英文electronic speed controller（ESC）。电调对应使用的电机不同，分无刷电调和有刷电调。</p>
+<p>有刷电机的永磁体是固定不动的，线圈绕在转子上，通过一个电刷跟换相器接触间断来改变磁场方向来保持转子持续转动。无刷电机，顾名思义，这种电机是没有所谓的电刷和换相器的，他的转子是永磁体，而线圈是固定不动的，直接接到外部电源，问题就来了，线圈磁场方向怎么改变呢？事实上，无刷电机外部还需要一个电子调速器，这个调速器说白了就是一个电机驱动，它随时都在改变着固定线圈内部电流的方向，保证它跟永磁体之间的作用力是相互排斥，持续转动得以延续。</p>
 <p><img src="http://doask.qiniudn.com/openbook10esc.png" alt=""></p>
 <p>有刷电机工作可以不需要电调，直接把电供给电机就能够工作，但是这样无法控制电机的转速。无刷电机工作必须要有电调，否则是不能转动的。必须通过无刷电调将直流电转化为三相交流电，输给无刷电机才能转动。</p>
 <p>一般使用PWM的占空比来控制电机的转速。</p>
-<h2 id="crazepony">Crazepony电机驱动</h2>
-<p>Crazepony使用的是有刷空心杯电机，所以电机的控制属于有刷直流电机控制。相对于无刷电调来说要简单很多，所以电调我们就默认指无刷电机的电调，而这里只用电机驱动来代替。</p>
-<p>Crazepony的电机驱动IC选型经历了三级管，中功率管的失败，最后选用的是场效应管（即MOSFET）SI2302。关于为什么会选用这片IC，在CamelGo的博客<a href="http://www.crazepony.com/2014/05/29/story-with-crazepony-2.html" target="_blank">我和Crazepony的那点事儿(2)</a>中有这么一段描述。</p>
+<h2 id="crazepony-">Crazepony电机驱动</h2>
+<p>无刷电机的操作相对来说是比较麻烦的，而有刷电机就是我们小时候玩的四驱车上的那种电机，接上电就能猛转，反着接它就反着猛转，就是这么简单。</p>
+<p>Crazepony使用的是有刷空心杯电机，所以电机的控制属于有刷直流电机控制。相对于无刷电调来说要简单很多，所以电调我们就默认指无刷电机的电调，而这里只用电机驱动来代替。Crazepony采用的是有刷空心杯高速电机，转速在3W转/分钟左右。要驱动有刷电机，很简单，只需要将信号的驱动能力增大，就能驱动有刷电机了。</p>
+<p>那么选择什么元件来提供这样的特性呢?Crazepony的电机驱动IC选型经历了三级管，中功率管的失败，最后选用的是场效应管（即MOSFET）SI2302。</p>
+<p>由于笔者完全是由于一种强烈的爱好选择了飞行器，最开始连有刷电机和无刷电机的物理结构区别都不知道，电调又是啥？傻傻分不清楚……</p>
 <blockquote>
 <p>从一个几乎零基础的状态去选择电机驱动芯片，弯路是必须要走的，学费是必须要交的。曾以为书上学到的东西马上就能用，马上能转化为产品，后来发现真的是自己想多了。</p>
-<p>最开始用的三极管作为电机驱动，采用很经典的共射电路“三极管工作在开关状态应该就行了吧？”画了用三极管驱动的PCB板，发现电机越转越慢，根本没劲。“也许是因为三极管扛不了大电流，好吧那我换个中功率管吧，集电极最大6A电流行了吧？”可以想象结果是不行的</p>
+</blockquote>
+<p>最开始用的三极管作为电机驱动，采用很经典的共射电路“三极管工作在开关状态应该就行了吧？”画了用三极管驱动的PCB板，发现电机越转越慢，根本没劲。“也许是因为三极管扛不了大电流，好吧那我换个中功率管吧，集电极最大6A电流行了吧？”可以想象结果是不行的。</p>
+<p><img src="http://doask.qiniudn.com/openbook10motor-driver-2.png" alt=""></p>
 <p>首先了解下为什么三极管作为简单的电机驱动是不可取的方案：</p>
 <ul>
-<li>三极管作为一个古老的半导体先驱，它是以一个放大器件的姿态而出现的，它在线性区域特性集中，饱和与截止都是两种极端的工作状态，而作为电机驱动的话，我们只能选择它的这两种极端工作模式</li>
+<li>三极管作为一个古老的半导体先驱，它是以一个放大器件的姿态而出现的，它在线性区域特性集中，饱和与截止都是两种极端的工作状态，而作为电机驱动的话，我们只能选择它的这两种极端工作模式。</li>
 <li>用三极管作为大电流负载的驱动管时，不得不考虑的是他自身的管压降对负载的影响，这是很严重的。自身耗散越来越大，电机和管子是串联关系，电池电压只有3.7V，电机就只能越转越慢了</li>
 </ul>
-<p>在晶体管家族里面还有一种跟三极管特性互补的，所有特性都集中在开关状态的晶体管，场效应管，即MOSFET。通常的场效应管完全导通时，源漏极电阻都是mΩ级别的，即它自身的耗散非常小。用它做为驱动管再合适不过了。</p>
-<p>最终选择了一个SOT23封装的,导通电压Vgs&lt;4v的场管（SI2302）,结果表现出了很好的驱动性能。</p>
-</blockquote>
-<p>主控输出的是PWM波形，用于控制场效应管的关闭和导通，从而控制电机的转动速度。这就是crazepony电机驱动的原理。</p>
+<p>在晶体管家族里面还有一种跟三极管特性互补的，所有特性都集中在开关状态的晶体管，场效应管，即MOSFET。通常的场效应管完全导通时，源漏极电阻都是mΩ级别的，即它自身的耗散非常小。用它做为驱动管再合适不过了。最终选择了一个SOT23封装的,导通电压Vgs&lt;4v的场管（SI2302）,结果表现出了很好的驱动性能。</p>
 <p><img src="http://doask.qiniudn.com/openbook10motor-driver.png" alt=""></p>
-<h2 id="tiao">无刷电调（读做tiao）</h2>
+<p>每个场效应管接一个大电阻下拉，目的是为了防止在单片机没接手电机的控制权时，电机由于PWM信号不稳定开始猛转。接一个下拉电阻，保证了场管输入信号要么是高，要么是低，没有不确定的第三种状态。那么电机也只有两种状态，要么转，要么不转。主控输出的是PWM波形，用于控制场效应管的关闭和导通，从而控制电机的转动速度。这就是crazepony电机驱动的原理。就是这么简单。</p>
+<h2 id="-tiao-">无刷电调（读做tiao）</h2>
 <p>在《电机与桨叶》一文中，我们提到<strong>大四轴基本上都是使用的无刷电机，无刷电机控制必须配合电调使用</strong>。</p>
 <p>电调的输入是直流，通常由锂电池来供电。输出是三相交流，可以直接驱动电机。另外航模无刷电子调速器还有三根信号输入线，输入PWM信号，用于控制电机的转速。对于航模，尤其是四轴飞行器，由于其特殊性，需要专门的航模电调。</p>
 <p><img src="http://doask.qiniudn.com/openbook10esc.jpg" alt=""></p>
 <p>那么为什么在四轴飞行器上需要专门的电调呢，其有什么特别的地方？四轴飞行器有四个桨，两两相对呈十字交叉结构。在桨的转向上分正转和反转，这样可抵消单个桨叶旋转引起的自旋问题。每个桨的直径很小，四个桨转动时的离心力是分散的。不像直机的桨，只有一个能产生集中的离心力形成陀螺性质的惯性离心力，保持机身不容易很快的侧翻掉。所以通常用到的舵机控制信号更新频率很低。</p>
 <p>四轴为了能够快速反应，以应对姿态变化引起的飘移，需要高反应速度的电调，常规PPM电调的更新速度只有50Hz左右，满足不了这种控制所需要的速度，且PPM电调MCU内置PID稳速控制，能对常规航模提供顺滑的转速变化特性，用在四轴上就不合适了，四轴需要的是快速反应的电机转速变化。用高速专用电调，IIC总线接口传送控制信号，可达到每秒几百上千次的电机转速变化，在四轴飞行时，姿态时刻能够保持稳定。即使受到外力突然冲击，依旧安然无恙。</p>
-<h2 id="">扩展阅读</h2>
+<h2 id="-">扩展阅读</h2>
 <p>IT公司关于电机驱动和控制解决方IT公司关于电机驱动和控制解决方案案<a href="http://www.ti.com.cn/ww/motor_drive_and_control_solutions/index.htm" target="_blank">IT公司关于电机驱动和控制解决方案</a>。</p>
 
                     
@@ -415,15 +441,11 @@
 <script src="../gitbook/app.js"></script>
 
     
-    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
     <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

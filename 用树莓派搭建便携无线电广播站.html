@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en-US" >
+<html lang="en-US" manifest="./manifest.appcache">
     
     <head>
         
@@ -7,7 +7,7 @@
         <title>用树莓派搭建便携无线电广播站 | 开源杂志-第十期</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 0.6.3">
+        <meta name="generator" content="GitBook 0.5.5">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,7 +32,7 @@
 
 
         
-    <div class="book" data-github="obookcc/openbook10bak" data-level="4" data-basepath="." data-revision="1406769536442">
+    <div class="book" data-github="obookcc/openbook10bak" data-level="4" data-basepath="." data-revision="1408415515379">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -109,7 +109,7 @@
         
         
         <li>
-            <a href="https://github.com/obookcc/openbook10bak/issues" target="blank" class="issues-link">Questions and Issues</a>
+            <a href="https://github.com/obookcc/openbook10bak/issues" target="blank"class="issues-link">Questions and Issues</a>
         </li>
         
 
@@ -119,8 +119,6 @@
             <a href="https://github.com/obookcc/openbook10bak/edit/master/用树莓派搭建便携无线电广播站.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
-
-	
 
         
         <li class="divider"></li>
@@ -270,7 +268,7 @@
                         
                             <b>2.3.</b>
                         
-                         如何DIY属于自己的四轴飞行器
+                         DIY四轴飞行器如何入门
                     </a>
                 
             
@@ -299,7 +297,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="4" data-path="用树莓派搭建便携无线电广播站.html">
+        <li class="chapter " data-level="4" data-path="用树莓派搭建便携无线电广播站.html">
             
                 
                     <a href="./用树莓派搭建便携无线电广播站.html">
@@ -350,7 +348,7 @@
     
         <a href="./quadcopter/hardware-base.html" title="CrazePony硬件原理" class="chapter done " data-progress="2.2" style="left: 70%;"></a>
     
-        <a href="./quadcopter/diy-quadcopter.html" title="如何DIY属于自己的四轴飞行器" class="chapter done " data-progress="2.3" style="left: 80%;"></a>
+        <a href="./quadcopter/diy-quadcopter.html" title="DIY四轴飞行器如何入门" class="chapter done " data-progress="2.3" style="left: 80%;"></a>
     
         <a href="./可重复使用的无线点火器.html" title="可重复使用的无线点火器" class="chapter done new-chapter" data-progress="3" style="left: 90%;"></a>
     
@@ -363,7 +361,7 @@
                 
                     <section class="normal" id="section-gitbook_12">
                     
-                        <h1 id="">用树莓派搭建便携无线电广播站</h1>
+                        <h1 id="-">用树莓派搭建便携无线电广播站</h1>
 <p>标签（空格分隔）： 树莓派 无线电广播</p>
 <hr>
 <blockquote>
@@ -376,7 +374,7 @@
 <p>PiFM 最初是由Oliver Mattos 和Oskar Weigl制定，由Ryan Grassel修订。这里要非常感谢PiFM社区所带来的灵感。MAKE对这个项目的贡献就是PirateRadio.py这个脚本，现在可以不用命令行即可自动播放与处理大部分音乐文件格式。这是MAKE实验室工程师实习生Wynter Woods。你可以在<a href="https://github.com/Make-Magazine/PirateRadio" target="_blank">这里</a>下载源代码。</p>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio1.jpg" alt=""></p>
 <p><strong>注意</strong>：树莓派的广播频率可以从1Mhz到250Mhz，不过这可能与政府使用的频率有冲突。我们建议将频率限制在87.5MHz-108.0MHz的标准FM频率，并且选择并没有使用的频率，避免与获得许可授权的广播商冲突。</p>
-<h2 id="">第一步：制作天线</h2>
+<h2 id="-">第一步：制作天线</h2>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio2.jpg" alt=""></p>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio3.jpg" alt=""></p>
 <ul>
@@ -388,7 +386,7 @@
 </li>
 <li><strong>注意：</strong>如果你有树莓派初级套件，并且非常赶时间，你可以只将母头跳线插到扩展板上。虽然会工作，但是范围将会是用40cm长12号实心线的一半。</li>
 </ul>
-<h2 id="sd">第二步：烧写SD卡，添加音乐。</h2>
+<h2 id="-sd-">第二步：烧写SD卡，添加音乐。</h2>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio4.png" alt=""></p>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio5.jpg" alt=""></p>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio6.jpg" alt=""></p>
@@ -404,7 +402,7 @@
 <li><p>添加音乐，只需要将艺术家和或专辑文件夹复制到SD卡中“Pirate Radio”分区的根目录下即可。你的音乐文件可以放在这些文件夹中，而不必将其在主文件夹下乱堆一气。</p>
 </li>
 </ul>
-<h2 id="">第三步：编辑和配置文件。</h2>
+<h2 id="-">第三步：编辑和配置文件。</h2>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio7.jpg" alt=""></p>
 <ul>
 <li>在pirateradio.config文件中可以设置想要广播的频率。用文本编辑器打开，就会看到如下所示的代码：</li>
@@ -422,11 +420,11 @@ repeat_all = True
 <li><p>设置repeat_all 为True，则为不断循环播放列表</p>
 </li>
 </ul>
-<h2 id="">第四步：启动它吧！</h2>
+<h2 id="-">第四步：启动它吧！</h2>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio8.jpg" alt=""></p>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio9.jpg" alt=""></p>
 <p>将FM无线电调到你设定的频率，然后插上树莓派。它需要15秒预热。一旦启动，你就能听到响亮清晰的音乐。</p>
-<h2 id="pifm">第五步：PiFM软件如何工作。</h2>
+<h2 id="-pifm-">第五步：PiFM软件如何工作。</h2>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio10.jpg" alt=""></p>
 <ul>
 <li><p>PiFM维基：“它使用树莓派上的硬件生成扩频时钟信号通过GPIO引脚发送FM无线电信号。这也就意味着所有你需要做的就是在GPIO4号引脚上插上一根电线左右天线并运行代码把树莓派变成一个FM发射器“</p>
@@ -436,7 +434,7 @@ repeat_all = True
 <li><p>python代码默认是87.9 FM ，随机循环，关闭重复。它可以根据配置文件自动扫描SD卡中得音乐文件并且建立播放列表。然后根据文件类型分别解码成PiFM可以识别的类型。这样，就不仅仅能播放WAV文件，还有，MP3,FLAC,M4A，AAC，甚至WMA文件。</p>
 </li>
 </ul>
-<h2 id="">第六步：深入讨论</h2>
+<h2 id="-">第六步：深入讨论</h2>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio11.jpg" alt=""></p>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio12.jpg" alt=""></p>
 <p><img src="http://doask.qiniudn.com/openbook10-RaspberryPirateRadio13.jpg" alt=""></p>
@@ -468,15 +466,11 @@ repeat_all = True
 <script src="gitbook/app.js"></script>
 
     
-    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
     <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

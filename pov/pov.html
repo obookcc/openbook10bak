@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en-US" >
+<html lang="en-US" manifest="../manifest.appcache">
     
     <head>
         
@@ -7,7 +7,7 @@
         <title>制作专属自己的POV旋转时钟 | 开源杂志-第十期</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 0.6.3">
+        <meta name="generator" content="GitBook 0.5.5">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="obookcc/openbook10bak" data-level="1.1" data-basepath=".." data-revision="1406769536442">
+    <div class="book" data-github="obookcc/openbook10bak" data-level="1.1" data-basepath=".." data-revision="1408415515379">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -111,7 +111,7 @@
         
         
         <li>
-            <a href="https://github.com/obookcc/openbook10bak/issues" target="blank" class="issues-link">Questions and Issues</a>
+            <a href="https://github.com/obookcc/openbook10bak/issues" target="blank"class="issues-link">Questions and Issues</a>
         </li>
         
 
@@ -121,8 +121,6 @@
             <a href="https://github.com/obookcc/openbook10bak/edit/master/pov/pov.md" target="blank" class="contribute-link">Edit and Contribute</a>
         </li>
         
-
-	
 
         
         <li class="divider"></li>
@@ -162,7 +160,7 @@
                 
     
         
-        <li class="chapter active" data-level="1.1" data-path="pov/pov.html">
+        <li class="chapter " data-level="1.1" data-path="pov/pov.html">
             
                 
                     <a href="../pov/pov.html">
@@ -272,7 +270,7 @@
                         
                             <b>2.3.</b>
                         
-                         如何DIY属于自己的四轴飞行器
+                         DIY四轴飞行器如何入门
                     </a>
                 
             
@@ -352,7 +350,7 @@
     
         <a href="../quadcopter/hardware-base.html" title="CrazePony硬件原理" class="chapter  " data-progress="2.2" style="left: 70%;"></a>
     
-        <a href="../quadcopter/diy-quadcopter.html" title="如何DIY属于自己的四轴飞行器" class="chapter  " data-progress="2.3" style="left: 80%;"></a>
+        <a href="../quadcopter/diy-quadcopter.html" title="DIY四轴飞行器如何入门" class="chapter  " data-progress="2.3" style="left: 80%;"></a>
     
         <a href="../可重复使用的无线点火器.html" title="可重复使用的无线点火器" class="chapter  new-chapter" data-progress="3" style="left: 90%;"></a>
     
@@ -365,13 +363,16 @@
                 
                     <section class="normal" id="section-gitbook_5">
                     
-                        <p>旋转时钟（或称POV-LED），也就是利用视觉暂留现象，通过一排（或数目有限）的LED灯快速地在一定区域重复扫过，来实现一个面的图像或文字的显示。相信很多有电子设计基础、会写单片机的朋友都做过。</p>
+                        <blockquote>
+<p>作者：钟晟，Craze团队成员，CrazePOV项目发起人</p>
+</blockquote>
+<p>旋转时钟（或称POV-LED），也就是利用视觉暂留现象，通过一排（或数目有限）的LED灯快速地在一定区域重复扫过，来实现一个面的图像或文字的显示。相信很多有电子设计基础、会写单片机的朋友都做过。</p>
 <p>笔者最初就是在一个宣讲会上看到一位学长做的旋转时钟，从此便热爱上了电子设计，并计划着自己实现一个旋转时钟。通过学习和努力，最终完成了这一制作，在传统的旋转时钟的基础之上，也进行了一些改进，接下来便会同大家分享这一制作。笔者还有很多很有趣的点子，也会持续更新这个项目并实现这些点子。欢迎大家持续关注这个项目，有任何建议也欢迎告知笔者，让我们一起完善这个有趣的东西！</p>
 <p><img src="http://doask.qiniudn.com/openbook10pov.jpg" alt=""></p>
 <embed src="http://player.youku.com/player.php/sid/XNzM3MjE2Mjcy/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 
 
-<h2 id="">点阵数据提取原理及其改进</h2>
+<h2 id="-">点阵数据提取原理及其改进</h2>
 <p>但就如同大多数人看到的一样，由于旋转时钟是圆周形扫描，而现在大多数现有的图片或文字的点阵提取软件都是按照行或者列来进行扫描的。所以使用这些点阵提取软件得到的数据在旋转时钟上面显示出来的效果只会是一个看上去像是扇形的带有一定畸变的图形，并不能得到我们平时经常看到的正向显示的效果。</p>
 <p>根据旋转时钟的显示原理：</p>
 <p><img src="http://doask.qiniudn.com/openbook10pov-theory.png" alt=""></p>
@@ -431,14 +432,14 @@ fclose(fid);
 </code></pre><p>利用上段提取字模和图片点阵数据的Matlab程序，对需要提取的图片或者文字信息进行处理以后，就可以得到需要的数据了。下面是利用上诉程序得到的兔斯基这张图片的数据</p>
 <p><img src="http://doask.qiniudn.com/openbook10pov-data-matrix.jpg" alt=""></p>
 <p>可以看到，每一组数据是由一个8位的十六进制数据构成，刚好是32位二进制数据，二进制“1”就代表是led要亮，“0”则代表灭。</p>
-<h2 id="">单片机控制程序设计思路</h2>
+<h2 id="-">单片机控制程序设计思路</h2>
 <p>在单片机控制程序方面需要的设计思路是利用光电传感器或者霍尔传感器（也可以使用诸如二维陀螺仪等传感器，但是这种一般在设计自行车轮毂的POV等不方便设置参考点的时候才需要用到，笔者在这里描述的POV主要是一个自制的单独模块，所以一般的光电传感器或者或偶尔传感器就可以满足设计要求了）在基板旋转到每一圈中的固定位置时，产生一个定位信号，并以此为基准开始每一度的扫描显示。</p>
 <p><img src="http://doask.qiniudn.com/openbook10pov-demo.jpg" alt=""></p>
 <p>如上图所示，在每转一圈的同时进行计时，旋转一圈得到的时间数据除以显示精度（例如精度为1°时，就除以360）就可以得到扫描显示间隔的时间，然后根据旋转该圈起始时间和当前时刻就可以得到基板当前的实际位置，然后根据数据对应显示该位置应显示的内容即可。</p>
 <p>有一点值得注意，若使用的单片机的缓存（ram）较大，可以设置一个显示缓存，扫描显示的时候显示的就是这个缓存里面的数据，需要变换图像的时候只需要更新缓存里面的数据即可。</p>
 <p>显示控制的程序流程图：</p>
 <p><img src="http://doask.qiniudn.com/openbook10pov-flow-graph.jpg" alt=""></p>
-<h2 id="">硬件环境的搭建</h2>
+<h2 id="-">硬件环境的搭建</h2>
 <p>要实际做出一个旋转时钟，少了实物制作当然是不行的，旋转时钟的系统框图如下所示：</p>
 <p><img src="http://doask.qiniudn.com/openbook10pov-hardware-graph.jpg" alt=""></p>
 <p>其中，具体需要注意的有以下几点：</p>
@@ -474,7 +475,7 @@ fclose(fid);
 <p><img src="http://doask.qiniudn.com/openbook10pov-demo-4.jpg" alt=""></p>
 <p><img src="http://doask.qiniudn.com/openbook10pov-demo-5.jpg" alt=""></p>
 <p><img src="http://doask.qiniudn.com/openbook10pov-demo-6.jpg" alt=""></p>
-<h2 id="">写在最后</h2>
+<h2 id="-">写在最后</h2>
 <p>这个旋转时钟是笔者在前年，也就是2012年10月的时候帮做硬件的队友做出来当做生日礼物送给他姐姐的。由于那个时候专业知识还不够完善，没有学习PCB设计，所以无奈只能选择手焊的方式（真的是太痛苦了。。。），所以制作也不算精良。</p>
 <p>笔者在写这篇文章的时候由于一些契机，将这个趣味制作翻了出来分享给大家，再加上笔者之前的一些奇思妙想，有了制作RGB彩色旋转显示系统的想法，而且经过这期间的学习，笔者已经会绘制PCB板了。所以，我也在继续完善这个项目，预计2014年暑期就可以完成RGB彩色旋转显示系统，下面是我已经完成设计的PCB板（正在工厂经行加工，很快就可以拿到实物了）的展示：</p>
 <p><img src="http://doask.qiniudn.com/openbook10pov-pcb-1.png" alt=""></p>
@@ -505,15 +506,11 @@ fclose(fid);
 <script src="../gitbook/app.js"></script>
 
     
-    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
     <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
