@@ -10,12 +10,12 @@ In true Si digital fashion we decided to take this to the next level and automat
 
 ## 全面自动化
 我们在球拍里埋入微小的射频标识（即电子标签）。在这套系统下，玩家们只需走向球桌，他们的脸便出现在大屏幕上，新的一局就准备好了。
-![](embed src="http://v.youku.com/v_show/id_XNzc5MjQzNTQ4.html)
+<embed src="http://player.youku.com/player.php/sid/XNzc5MjQzNTQ4/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 在得到一分后，我们只需用手指碰碰球桌下，屏幕就会自动更新实时比分。
-![](embed src="http://v.youku.com/v_show/id_XNzc5MjQ0NTM2.html)
+<embed src="http://player.youku.com/player.php/sid/XNzc5MjQ0NTM2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 在玩家加分和启动系统时会播放提示音，而这提示音也预防了作弊--你休想在对手转身不注意时使出无影手按加分按钮！
 当有玩家到达最终21分而又领先对手2分时，系统自动结束游戏，发送祝贺信息，计算新排名，然后跳转回排名榜画面。比起11分制，我们还是玩21分制比赛，因为以我们现在的渣球技，比赛会太早结束！
-![](embed src="http://v.youku.com/v_show/id_XNzc5MjQ1Njky.html)
+<embed src="http://player.youku.com/player.php/sid/XNzc5MjQ1Njky/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 ## 技术细节
 这个项目分为三个关键要素，令软硬件协调，共建乒乓球赛良好风尚。（有那么大的帽子扣上吗？）
 1.计分
@@ -32,7 +32,7 @@ In true Si digital fashion we decided to take this to the next level and automat
 
 3.实时计分板
 Nide.js和Socket.io是用来确保在我们玩的时候，屏幕上实时更新分数。有明确的事件触发时，提示音就会播出。
-![](embed src="http://v.youku.com/v_show/id_XNzc5MjUyOTA0.html)
+<embed src="http://player.youku.com/player.php/sid/XNzc5MjUyOTA0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 最初我们发现破解提示音挺麻烦的。移动浏览器受限于用户输入才能触发提示音，意味着用户必须在进入应用时触发某种输入条件（例如触屏）才能启用声音。经过些粗略尝试破解后（直接录入音源），我们选中了一段声音片段，最后将其质量提高和稳定化。经过采样匹配算法和发音模块处理，我们很快完成输出声音片段的流程。我们用脚本howler.js处理音频输出。
 我们在Github的报告里，从服务器程序到硬件统统开源了。
 想加入我们下个创作计划吗？我们正寻求一名UI/网页设计师和一名前端开发工程师。
