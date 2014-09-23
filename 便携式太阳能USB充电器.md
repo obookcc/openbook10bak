@@ -1,6 +1,6 @@
 # 便携式太阳能USB充电器
 
-标签：太阳能 
+标签：太阳能 USB充电器
 
 --- 
 >[原文链接](http://www.instructables.com/id/Portable-Solar-USB-Charger/?ALLSTEPS) 作者: jenfoxbot   翻译:BigBear
